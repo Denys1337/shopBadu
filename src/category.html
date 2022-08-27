@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+  <meta name="viewport" content="device-width">
+  <title>xor_test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  @@include('./component/header.html')
+  <div class="path">
+    <p>Главная</p>
+    <img src="images/ArrowRight.png" alt="arrow" />
+    <p>Ингредиенты</p>
+    <img src="images/ArrowRight.png" alt="arrow" />
+    <p>Нутрицевтики для эндокринной системы</p>
+  </div>
+  <div class="title">
+    <h2>Нутрицевтики для эндокринной системы</h2>
+  </div>
+  <div class="sort">
+    <div class="main">
+      <div class="sort__container">
+        <div class="filter-menu">
+          <input id="filter__toggle" type="checkbox" />
+          <label class="filter__btn" for="filter__toggle">
+            <p class="filterIcon"><img src="images/filter.svg" alt="" /> Фильтры</p>
+          </label>
+          <ul class="filter__box">
+            <div class="category__leftbar-mobile">
+              <div class="category__company">
+                <img src="images/Springfield.png" alt="" />
+                <img src="images/syform.png" alt="" />
+              </div>
+              <div class="category__block">
+                <div class="category__specific">
+                  <img src="images/ArrowDown.svg" alt="" />
+                  <h4>Ингредиенты</h4>
+                </div>
+                <div class="category__items">
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>амінокислоти</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>жирні кислоти (омега 3)</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>пребіотики</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>фнтидеприсант</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>вітаміни</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>пробіотики</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>мінерали</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>флавоноїди</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>со-фактор</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>поліфеноли</p>
+                  </div>
+                </div>
+              </div>
+              <div class="category__block">
+                <div class="category__specific">
+                  <img src="images/ArrowDown.svg" alt="" />
+                  <h4>Диетические особенности</h4>
+                </div>
+                <div class="category__items">
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>не содержит глютен</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>без ГМО</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>вегетарианец</p>
+                  </div>
+                </div>
+              </div>
+              <div class="category__block">
+                <div class="category__specific">
+                  <img src="images/ArrowDown.svg" alt="" />
+                  <h4>Форма выпуска</h4>
+                </div>
+                <div class="category__items">
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>капсулы(33)</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>таблетки (37)</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>порошок (15)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="category__block">
+                <div class="category__specific">
+                  <img src="images/ArrowDown.svg" alt="" />
+                  <h4>Страна производителя</h4>
+                </div>
+                <div class="category__items">
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>Нидерланды</p>
+                  </div>
+                  <div class="item">
+                    <input type="radio" value="" />
+                    <p>Италия</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </ul>
+
+        </div>
+        <div class="sortby">
+          <p>Сортировать:</p>
+          <input type="button" class="sort__tab" value="по популярности">
+          <input type="button" class="sort__tab" value="по названию">
+        </div>
+        <div class="popularSort">
+          <h4>по популярности</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="category">
+    <div class="main">
+      <div class="category__container">
+        <div class="category__leftbar">
+          <div class="category__company">
+            <img src="images/Springfield.png" alt="" />
+            <img src="images/syform.png" alt="" />
+          </div>
+          <div class="category__block">
+            <div class="category__specific">
+              <img src="images/ArrowDown.svg" alt="" />
+              <h4>Ингредиенты</h4>
+            </div>
+            <div class="category__items">
+              <div class="item">
+                <input type="radio" value="" />
+                <p>амінокислоти</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>жирні кислоти (омега 3)</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>пребіотики</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>фнтидеприсант</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>вітаміни</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>пробіотики</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>мінерали</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>флавоноїди</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>со-фактор</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>поліфеноли</p>
+              </div>
+            </div>
+          </div>
+          <div class="category__block">
+            <div class="category__specific">
+              <img src="images/ArrowDown.svg" alt="" />
+              <h4>Диетические особенности</h4>
+            </div>
+            <div class="category__items">
+              <div class="item">
+                <input type="radio" value="" />
+                <p>не содержит глютен</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>без ГМО</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>вегетарианец</p>
+              </div>
+            </div>
+          </div>
+          <div class="category__block">
+            <div class="category__specific">
+              <img src="images/ArrowDown.svg" alt="" />
+              <h4>Форма выпуска</h4>
+            </div>
+            <div class="category__items">
+              <div class="item">
+                <input type="radio" value="" />
+                <p>капсулы(33)</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>таблетки (37)</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>порошок (15)</p>
+              </div>
+            </div>
+          </div>
+          <div class="category__block">
+            <div class="category__specific">
+              <img src="images/ArrowDown.svg" alt="" />
+              <h4>Страна производителя</h4>
+            </div>
+            <div class="category__items">
+              <div class="item">
+                <input type="radio" value="" />
+                <p>Нидерланды</p>
+              </div>
+              <div class="item">
+                <input type="radio" value="" />
+                <p>Италия</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="category__products">
+          <div class="product">
+            <img src="images/LGlut.png" alt="">
+            <h3>L-глютамин 1</h3>
+            <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+            <div class="buttonSlider">
+              <a href="#">Подробнее </a>
+              <img src="images/ArrowWhite.png" alt="">
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/LGlut.png" alt="">
+            <h3>L-глютамин 1</h3>
+            <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+            <div class="buttonSlider">
+              <a href="#">Подробнее </a>
+              <img src="images/ArrowWhite.png" alt="">
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/LGlut.png" alt="">
+            <h3>L-глютамин 1</h3>
+            <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+            <div class="buttonSlider">
+              <a href="#">Подробнее </a>
+              <img src="images/ArrowWhite.png" alt="">
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/LGlut.png" alt="">
+            <h3>L-глютамин 1</h3>
+            <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+            <div class="buttonSlider">
+              <a href="#">Подробнее </a>
+              <img src="images/ArrowWhite.png" alt="">
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/LGlut.png" alt="">
+            <h3>L-глютамин 1</h3>
+            <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+            <div class="buttonSlider">
+              <a href="#">Подробнее </a>
+              <img src="images/ArrowWhite.png" alt="">
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/LGlut.png" alt="">
+            <h3>L-глютамин 1</h3>
+            <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+            <div class="buttonSlider">
+              <a href="#">Подробнее </a>
+              <img src="images/ArrowWhite.png" alt="">
+            </div>
+          </div>
+        </div>
+  </section>
+  @@include_once('./component/sliderProducts.html', {
+  "title": "Просмотренные товары",
+  })
+  @@include('./component/footer.html')
+</body>
+
+</html>

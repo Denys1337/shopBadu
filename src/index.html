@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+    <meta name="viewport" content="device-width">
+    <title>xor_test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    @@include('./component/header.html')
+    <section class="mainBanner">
+        <div class="main">
+            <div class="contentBanner">
+                <h2>Текстовый заголовок <br />
+                    в две строки</h2>
+                <p>Ваши персонализированные витамины на основе клинических данных и научных исследований.</p>
+                <div class="contentBanner__button">
+                    <a href="#">Подробнее →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info">
+        <div class="main">
+            <div class="info__containerInfo">
+                <div class="info__title">
+                    <p>КАЧЕСТВА ОТ ПРИРОДЫ, ЭНЕРГИЯ ОТ СТРАСТИ</p>
+                    <div class="info__text2">
+                        <p>
+                            Параметры организма 99,99% людей находятся за пределами оптимальных значений. 35% — испытывают
+                            медицинские отклонения, о которых могут не подозревать.
+                        </p>
+                        <h3>Миссия preventa — сделать управление здоровьем доступным и удобным!</h3>
+                        <p>
+                            Начните заботиться о своем будущем — проходите регулярные чекапы с bioniq и принимайте
+                            персонализированные витамины для поддержания качественного и здорового образа жизни!
+                        </p>
+                        
+                    </div>
+                    <div class="info__button">
+                        <a href="#">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="info__text">
+                    <p>
+                        Параметры организма 99,99% людей находятся за пределами оптимальных значений. 35% — испытывают
+                        медицинские отклонения, о которых могут не подозревать.
+                    </p>
+                    <h3>Миссия preventa — сделать управление здоровьем доступным и удобным!</h3>
+                    <p>
+                        Начните заботиться о своем будущем — проходите регулярные чекапы с bioniq и принимайте
+                        персонализированные витамины для поддержания качественного и здорового образа жизни!
+                    </p>
+                    
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <section class="grid">
+        <div class="innerPhoto">
+          <div class="grid-item">
+            <div class="blur"></div>
+            <img src="images/firstDetails.png" alt="">
+            <div class="info">
+              <span>Нутрицевтики <br> для эндокринной системы</span>
+              <button>Подробнее <img src="images/ArrowRight.png" alt=""></button>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="blur"></div>
+            <img src="images/secondDetails.png" alt="">
+            <div class="info">
+              <span>Нутрицевтики <br>
+                для сердечно-сосудистой системы</span>
+              <button>Подробнее <img src="images/ArrowRight.png" alt=""></button>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="blur"></div>
+            <img src="images/thirdDetails.png">
+            <div class="info">
+              <span>Нутрицевтики <br>
+                для нервной системы</span>
+              <button>Подробнее <img src="images/ArrowRight.png" alt=""></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include_once('./component/slider.html', {
+        "title": "Ингредиенты",
+      })
+    <section class="detailVideo">
+        <div class="main">
+            <div class="detailVideo__container">
+                <div class="detailVideo__content">
+                    <h2>Экологически ответственный
+                        и устойчивый сбор:
+                        масло калануса NourSea</h2>
+                    <p>
+                        Чистое масло омега–3 - от природы – в форме восковых эфиров.
+                        Экологически ответственный и экологически чистый продукт, собранный в чистой Северной части
+                        Атлантического океана.
+                    </p>
+                    <div class="buttonDetails">
+                        <a href="#">Подробнее →</a>
+                    </div>
+                </div>
+                <div class="video">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/1zebQD2z2qI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    @@include('./component/footer.html')
+</body>
+
+</html>

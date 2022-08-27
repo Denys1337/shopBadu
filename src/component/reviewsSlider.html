@@ -1,0 +1,113 @@
+<section class="sliderProducts">
+  <div class="inner">
+    <h2>Отзывы</h2>
+    <div id="ingredients-slider">
+      <div id="ingredients-slider-track">
+        <div class="slideReview">
+          <div class="slideReview__name">
+            <h4>Смирнова Виктория</h4>
+            <p>20.07.2022</p>
+          </div>
+          <div class="slideReview__elips">
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/elip.svg" alt="" />
+            <p>4.9</p>
+          </div>
+          <p class="reviewText">Витамин D3 в пищевых добавках почти всегда поступает из жира овечьей шерсти (ланолина). Этот источник
+            подходит для вегетарианцев, но не для веганов. На рынке также есть пищевые добавки с растительным витамином
+            D2, но исследования показывают, что витамин D3 демонстрирует значительно более высокую концентрацию витамина
+            D в крови.
+            Витамин D3 в D3-Vegan поступает из лишайника и идентичен витамину D3, содержащемуся в широко используемом
+            жире из овечьей шерсти.</p>
+        </div>
+        <div class="slideReview">
+          <div class="slideReview__name">
+            <h4>Смирнова Виктория</h4>
+            <p>20.07.2022</p>
+          </div>
+          <div class="slideReview__elips">
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/elip.svg" alt="" />
+            <p>4.9</p>
+          </div>
+          <p class="reviewText">11111111111Витамин D3 в пищевых добавках почти всегда поступает из жира овечьей шерсти (ланолина). Этот источник
+            подходит для вегетарианцев, но не для веганов. На рынке также есть пищевые добавки с растительным витамином
+            D2, но исследования показывают, что витамин D3 демонстрирует значительно более высокую концентрацию витамина
+            D в крови.
+            Витамин D3 в D3-Vegan поступает из лишайника и идентичен витамину D3, содержащемуся в широко используемом
+            жире из овечьей шерсти.</p>
+        </div>
+        <div class="slideReview">
+          <div class="slideReview__name">
+            <h4>Смирнова Виктория</h4>
+            <p>20.07.2022</p>
+          </div>
+          <div class="slideReview__elips">
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/elip.svg" alt="" />
+            <p>4.9</p>
+          </div>
+          <p class="reviewText">Витамин D3 в пищевых добавках почти всегда поступает из жира овечьей шерсти (ланолина). Этот источник
+            подходит для вегетарианцев, но не для веганов. На рынке также есть пищевые добавки с растительным витамином
+            D2, но исследования показывают, что витамин D3 демонстрирует значительно более высокую концентрацию витамина
+            D в крови.
+            Витамин D3 в D3-Vegan поступает из лишайника и идентичен витамину D3, содержащемуся в широко используемом
+            жире из овечьей шерсти.</p>
+        </div>
+        <div class="slideReview">
+          <div class="slideReview__name">
+            <h4>Смирнова Виктория</h4>
+            <p>20.07.2022</p>
+          </div>
+          <div class="slideReview__elips">
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/elip.svg" alt="" />
+            <p>4.9</p>
+          </div>
+          <p class="reviewText">1111111111111111Витамин D3 в пищевых добавках почти всегда поступает из жира овечьей шерсти (ланолина). Этот источник
+            подходит для вегетарианцев, но не для веганов. На рынке также есть пищевые добавки с растительным витамином
+            D2, но исследования показывают, что витамин D3 демонстрирует значительно более высокую концентрацию витамина
+            D в крови.
+            Витамин D3 в D3-Vegan поступает из лишайника и идентичен витамину D3, содержащемуся в широко используемом
+            жире из овечьей шерсти.</p>
+        </div>
+        
+      </div>
+      <button id="slider-prev"><img src="images/ArrowLeft.png" alt="" style="transform: rotate(180deg);"></button>
+      <button id="slider-next"><img src="images/ArrowRight.png" alt=""></button>
+    </div>
+  </div>
+</section>
+<script>
+      const sliderPrev = document.getElementById('slider-prev');
+    const sliderNext = document.getElementById('slider-next');
+    const ingredientsSliderTrack = document.getElementById('ingredients-slider-track');
+    const sliderCount = document.getElementsByClassName('slideReview').length;
+    let left = 0;
+
+    sliderNext.addEventListener('click', () => {
+    const ingredientsSliderWidth = document.getElementById('ingredients-slider').clientWidth;
+    const slideWidth = document.querySelector('.sliderProducts .inner #ingredients-slider #ingredients-slider-track .slideReview').clientWidth;
+    const slidesViewCount = Math.floor(ingredientsSliderWidth / slideWidth)
+    left = left - slideWidth - 30;
+    console.log(left)
+    if ((slideWidth + 30) * sliderCount < (slideWidth + 30) * slidesViewCount - left) {
+    left = 0
+    }
+    ingredientsSliderTrack.style.left = `${left}px`;
+    });
+
+</script>
+

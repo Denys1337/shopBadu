@@ -1,0 +1,226 @@
+.contact {
+  padding-bottom: 70px;
+  @media (max-width: 987px) {
+    padding-bottom: 20px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1200px) {
+      justify-content: space-around;
+    }
+    @media (max-width: 987px) {
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 15px 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 44px 0;
+    @media (max-width: 987px) {
+      width: 100%;
+      justify-content: center;
+      gap: 15px 0;
+      align-items: start;
+    }   
+
+    .flexInfo {
+      display: flex;
+      gap: 0 15px;
+      @media (max-width: 940px) {
+        margin: 0 10px;
+      }
+
+      p {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+        color: #B9B1AD;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0 25px;
+    @media (max-width: 987px) {
+      display: none;
+      
+    }
+  }
+
+  &__map {
+    @media (max-width: 987px) {
+      display: flex;
+      justify-content: center;
+      gap: 15px 0;
+      img{
+        width: 100%;  
+      }
+    }
+  }
+}
+
+.buttonContact {
+  max-width: 210px;
+  width: 100%;
+  background: #B9B1AD;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  padding: 17px 0;
+  @media (max-width: 987px) {
+    display: none;
+  }
+
+  a {
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+}
+
+.sliderHospital .inner {
+  max-width: 1222px;
+  margin: auto;
+  padding-bottom: 143px;
+}
+
+.sliderHospital .inner h2 {
+  padding-bottom: 35px;
+  text-align: center;
+  font-family: 'Tenor Sans';
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 54px;
+  color: #19191E;
+  @media (max-width: 560px) {
+    font-size: 27px;
+  }
+}
+
+.sliderHospital .inner #ingredients-slider {
+  padding: 0 26px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliderHospital .inner #ingredients-slider #ingredients-slider-track {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+}
+
+.sliderHospital .inner #ingredients-slider #ingredients-slider-track .slide {
+  min-width: 270px;
+  height: 239px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sliderHospital .inner #ingredients-slider #ingredients-slider-track .slide img {
+  width: 276px;
+  height: 276px;
+}
+
+.sliderHospital .inner #ingredients-slider #ingredients-slider-track .slide h3 {
+  font-family: 'Tenor Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #19191E;
+  margin: 0;
+  margin-top: -16px;
+}
+
+.sliderHospital .inner #ingredients-slider #ingredients-slider-track .slide p {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #939393;
+}
+
+.sliderHospital .inner #ingredients-slider button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  position: absolute;
+  border: none;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliderHospital .inner #ingredients-slider #slider-prev {
+  transform: rotate(180deg);
+  left: 0;
+} 
+
+.sliderHospital .inner #ingredients-slider #slider-next {
+  right: 0;
+} 
+
+@media (max-width: 1250px) {
+  .sliderHospital .inner {
+    max-width: 915px;
+  }
+}
+
+@media (max-width: 950px) {
+  .sliderHospital .inner {
+    max-width: 730px;
+  }
+
+  .sliderHospital .inner #ingredients-slider {
+    padding: 0px 12px;
+  }
+
+  .sliderHospital .inner #ingredients-slider #ingredients-slider-track .slide {
+    min-width: 215px;
+  }
+
+  .sliderHospital .inner #ingredients-slider button {
+    width: 36px;
+    height: 36px;
+    padding: 0 10px;
+  }
+
+  .sliderHospital .inner #ingredients-slider button img {
+    width: 18px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sliderHospital .inner {
+    max-width: 490px;
+  }
+}
+
+@media (max-width: 535px) {
+  .sliderHospital .inner {
+    max-width: 260px;
+  }
+}
+

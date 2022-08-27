@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+  <meta name="viewport" content="device-width">
+  <title>xor_test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  @@include('./component/header.html')
+  <div class="path">
+    <p>Главная</p>
+    <img src="images/ArrowRight.png" alt="arrow" />
+    <p>Корзина</p>
+  </div>
+  @@include('./component/cartShortComponent.html')
+  <section class="contactForm">
+    <div class="main">
+      <div class="contactForm__container">
+        <h3>Контактные данные</h3>
+        <input type="text" placeholder="Имя*" />
+        <input type="text" placeholder="Телефон*" />
+      </div>
+      <p class="conf">Ваши персональные данные будут использоваться для обработки вашего заказа, для оптимизации вашего использования
+        на этом веб-сайте и для других целей, как описано в нашей <a href="#">политике конфиденциальности</a>.</p>
+      <div class="buttonOrder">
+        <div class="buttonOrder__leftbutton">
+          <img src="images/ArrowLeft.png" alt=""/>
+          <a>Продолжить покупки</a>
+        </div>
+        <div class="buttonOrder__rightbutton">
+          <a>Оформить заказ</a>
+          <img src="images/ArrowWhite.png" alt=""/>
+        </div>
+      </div>
+    </div>
+  </section>
+  @@include('./component/sliderProducts.html', {
+    "title": "Рекомендуем также купить",
+  })
+  @@include('./component/sliderProducts.html', {
+    "title": "Просмотренные товары",
+  })
+  @@include('./component/footer.html')
+  <script>
+    let counterDisplayElem = document.querySelector('.counter-display');
+    let counterMinusElem = document.querySelector('.counter-minus');
+    let counterPlusElem = document.querySelector('.counter-plus');
+
+    let count = 1;
+
+    updateDisplay();
+
+    counterPlusElem.addEventListener("click", () => {
+      count++;
+      updateDisplay();
+    });
+
+    counterMinusElem.addEventListener("click", () => {
+      count--;
+      if (count <= 0) {
+        count = 1
+      }
+      updateDisplay();
+    });
+
+    function updateDisplay() {
+      counterDisplayElem.innerHTML = count;
+    };
+
+  </script>
+  <script>
+    let counterDisplay = document.querySelector('.counter-display2');
+    let counterMinus = document.querySelector('.counter-minus2');
+    let counterPlus = document.querySelector('.counter-plus2');
+
+    let count2 = 1;
+
+    updateDisplay2();
+
+    counterPlus.addEventListener("click", () => {
+      count2++;
+      updateDisplay2();
+    });
+
+    counterMinus.addEventListener("click", () => {
+      count2--;
+      if (count2 <= 0) {
+        count2 = 1
+      }
+      updateDisplay2();
+    });
+
+    function updateDisplay2() {
+      counterDisplay.innerHTML = count2;
+    };
+
+  </script>
+</body>
+
+</html>

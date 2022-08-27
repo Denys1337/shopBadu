@@ -1,0 +1,96 @@
+<section class="sliderProducts">
+  <div class="inner">
+    <h2>@@title</h2>
+    <div id="ingredients-slider">
+      <div id="ingredients-slider-track">
+        <div class="slide">
+          <img src="images/LGlut.png" alt="">
+          <h3>L-глютамин 1</h3>
+          <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+          <div class="buttonSlider">
+            <a href="#">Подробнее </a>
+            <img src="images/ArrowWhite.png" alt="">
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/LGlut.png" alt="">
+          <h3>L-глютамин 2</h3>
+          <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+          <div class="buttonSlider">
+            <a href="#">Подробнее </a>
+            <img src="images/ArrowWhite.png" alt="">
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/LGlut.png" alt="">
+          <h3>L-глютамин 3</h3>
+          <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+          <div class="buttonSlider">
+            <a href="#">Подробнее </a>
+            <img src="images/ArrowWhite.png" alt="">
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/LGlut.png" alt="">
+          <h3>L-глютамин 4</h3>
+          <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+          <div class="buttonSlider">
+            <a href="#">Подробнее </a>
+            <img src="images/ArrowWhite.png" alt="">
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/LGlut.png" alt="">
+          <h3>L-глютамин 5</h3>
+          <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+          <div class="buttonSlider">
+            <a href="#">Подробнее </a>
+            <img src="images/ArrowWhite.png" alt="">
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/LGlut.png" alt="">
+          <h3>L-глютамин 6</h3>
+          <p>L-глютамин является наиболее распространенной аминокислотой и участвует во многих процессах.</p>
+          <div class="buttonSlider">
+            <a href="#">Подробнее </a>
+            <img src="images/ArrowWhite.png" alt="">
+          </div>
+        </div>
+        
+      </div>
+      <button id="slider-prev"><img src="images/ArrowLeft.png" alt="" style="transform: rotate(180deg);"></button>
+      <button id="slider-next"><img src="images/ArrowRight.png" alt=""></button>
+    </div>
+  </div>
+</section>
+<script>
+      const sliderPrev = document.getElementById('slider-prev');
+    const sliderNext = document.getElementById('slider-next');
+    const ingredientsSliderTrack = document.getElementById('ingredients-slider-track');
+    const sliderCount = document.getElementsByClassName('slide').length;
+    let left = 0;
+
+    sliderNext.addEventListener('click', () => {
+    const ingredientsSliderWidth = document.getElementById('ingredients-slider').clientWidth;
+    const slideWidth = document.querySelector('.sliderProducts .inner #ingredients-slider #ingredients-slider-track .slide').clientWidth;
+    const slidesViewCount = Math.floor(ingredientsSliderWidth / slideWidth)
+    left = left - slideWidth - 30;
+    console.log(left)
+    if ((slideWidth + 30) * sliderCount < (slideWidth + 30) * slidesViewCount - left) {
+    left = 0
+    }
+    ingredientsSliderTrack.style.left = `${left}px`;
+    });
+
+    sliderPrev.addEventListener('click', () => {
+    const ingredientsSliderWidth = document.getElementById('ingredients-slider').clientWidth;
+    const slideWidth = document.querySelector('.sliderProducts .inner #ingredients-slider #ingredients-slider-track .slide').clientWidth;
+    const slidesViewCount = Math.floor(ingredientsSliderWidth / slideWidth)
+    left = left + slideWidth + 30;
+    if (left > 0) {
+    left = -((sliderCount - slidesViewCount) * (slideWidth + 30))
+    }
+    ingredientsSliderTrack.style.left = `${left}px`;
+    });
+</script>

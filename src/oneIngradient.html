@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+  <meta name="viewport" content="device-width">
+  <title>xor_test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  @@include('./component/header.html')
+  <div class="path">
+    <p>Главная</p>
+    <img src="images/ArrowRight.png" alt="arrow" />
+    <p>Ингредиенты</p>
+    <img src="images/ArrowRight.png" alt="arrow" />
+    <p>Цитрусовые</p>
+  </div>
+  <section class="aboutIngradient">
+    <div class="main">
+      <div class="aboutIngradient__container">
+        <img src="images/limon.png" alt="" />
+        <div>
+          <h2>Цитрусовые</h2>
+          <p>Самые известные цитрусовые - лимоны, апельсины и мандарины. Каждый вид имеет различные преимущества для
+            вашего здоровья. Цитрусовые полны витаминов и полезных антиоксидантов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  @@include('./component/sliderProducts.html', {
+    "title": "Товары с этим ингредиентом",
+  })
+  @@include('./component/slider.html', {
+    "title": "Другие ингредиенты",
+  })
+  @@include('./component/sliderProducts.html', {
+    "title": "Просмотренные товары",
+  })
+  @@include('./component/footer.html')
+</body>
+
+</html>

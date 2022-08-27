@@ -1,0 +1,125 @@
+.order {
+    padding-bottom: 162px;
+    @media (max-width: 830px) {
+      margin: 0 15px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 54px;
+    }
+        
+  &__container {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    padding: 55px 30px 43px;
+    @media (max-width: 1330px) {
+      width: 90%;
+      padding: 21px 17px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-family: 'Tenor Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 40px;
+      color: #19191E;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 77px;
+      @media (max-width: 830px) {
+        font-size: 27px;
+        padding-bottom: 11px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__card {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #B9B1AD;
+
+
+    p {
+      display: flex;
+      justify-content: flex-start;
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: #19191E;
+    }
+
+    .oneItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 11px;
+
+      .orderSum {
+        display:flex; 
+        justify-content:space-between; 
+        width: 35%;
+        padding-left: 10px;
+      }
+      @media (max-width:600px) {
+        flex-direction: column;
+      }
+      
+      &__image {
+        display: flex;
+        gap: 0 28px;
+        align-items: center;
+
+        img {
+          width: 56px;
+          height: 63px;
+        }
+  
+        h4 {
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 25px;
+          color: #19191E;
+        }
+      }
+      p {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #19191E;
+      }
+
+      &__price {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #B9B1AD !important;
+      }
+    }
+  }
+}
+
+.total_price {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 28px;
+
+  p {
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #B9B1AD;
+  }
+}

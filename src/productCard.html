@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+  <meta name="viewport" content="device-width">
+  <title>xor_test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  @@include('./component/header.html')
+  <div class="path">
+    <p>Главная</p>
+    <img src="images/ArrowRight.png" alt="arrow" />
+    <p>Товары</p>
+    <img src="images/ArrowRight.png" alt="arrow" />
+    <p>D3-Веганский витамин D3 из водорослей</p>
+  </div>
+  <section class="product">
+    <div class="main">
+      <div class="product__container">
+        <div class="product__image">
+          <img src="images/LGlutBig.png" alt="" />
+          <div class="download">
+            <img src="images/download.png" alt="" />
+            <a href="#">Скачать инструкцию по продукту</a>
+          </div>
+        </div>
+        <div class="product__info">
+          <h2>D3-Веганский витамин D3 из водорослей</h2>
+          <h4>D3-Vegan – добавки с витамином D3 на основе полностью</h4>
+          <div class="reviews">
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/Ellipse.svg" alt="" />
+            <img src="images/elip.svg" alt="" />
+            <p>Отзывы (5)</p>
+          </div>
+          <p>D3-Vegan – добавки с витамином D3 на основе полностью растительного масла – подходят для вегетарианцев и
+            веганов, способствуют укреплению костей, важны для нормальной работы мышц и поддерживают иммунную систему
+          </p>
+          <p class="key">Объем: <span>240 шт</span></p>
+          <p class="key">Вес нетто: <span>240 г</span></p>
+          <div class="counters">
+            <div class="counters__flex">
+              <div class="counters__check">
+                <input type="radio" value="Купить" />
+                <p>Купить</p>
+              </div>
+              <div class="counters__count">
+                <button class="counter-minus">-</button>
+                <p class="counter-display"></p>
+                <button class="counter-plus">+</button>
+              </div>
+            </div>
+            <div class="counters__flex">
+              <div class="counters__check">
+                <input type="radio" value="Купить курсом" />
+                <p>Купить курсом</p>
+              </div>
+              <div class="counters__count">
+                <button class="counter-minus2">-</button>
+                <p class="counter-display2"></p>
+                <button class="counter-plus2">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="buttonCardProduct">
+            <div class="buttonCardProduct__inCart">
+              <a href="#">В корзину</a>
+              <img src="images/ArrowWhite.png" alt="" />
+            </div>
+            <div class="buttonCardProduct__speedOrder">
+              <div class="popup-btn">Быстрый заказ <img src="images/ArrowRight.png" alt="" /></div>
+              <div class="popup">
+                <div class="container">
+                  <div class="body">
+                    <h3 class="title">Быстрый заказ</h3>
+                    <p class="pretitle">Заполните данные и мы свяжемся с Вами!</p>
+                    <form>
+                      <input type="text" placeholder="Имя*">
+                      <input type="text" placeholder="Телефон*">
+                      <button>Перезвоните мне <img src="assets/images/Arrow 1.png" alt=""></button>
+                    </form>
+                    <p class="info">Ваши персональные данные будут использоваться для обработки вашего заказа, для
+                      оптимизации вашего использования на этом веб-сайте и для других целей, как описано в нашей
+                      <u>политике конфиденциальности.</u>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="tab">
+    <div class="main">
+      <div class="tabs">
+        <nav class="tabs__items">
+          <a href="#tab_01" class="tabs__item active">Состав</a>
+          <a href="#tab_02" class="tabs__item">Способ применения </a>
+          <a href="#tab_03" class="tabs__item">Условия хранения</a>
+          <a href="#tab_04" class="tabs__item">Взаимодействие и предупреждения</a>
+        </nav>
+        <div class="tabs__body">
+          <div id="tab_01" class="tabs__block">
+            <h4>Эффективно</h4>
+            <p>Витамин D3 в пищевых добавках почти всегда поступает из жира овечьей шерсти (ланолина). Этот источник
+              подходит для вегетарианцев, но не для веганов. На рынке также есть пищевые добавки с растительным
+              витамином D2, но исследования показывают, что витамин D3 демонстрирует значительно более высокую
+              концентрацию витамина D в крови.
+              Витамин D3 в D3-Vegan поступает из лишайника и идентичен витамину D3, содержащемуся в широко используемом
+              жире из овечьей шерсти.</p>
+            <h4>Разные дозировки</h4>
+            <p>В D3-Vegan содержится 25 мкг (= 1000 мЕ) и 75 мкг (3000 мЕ) витамина D3.</p>
+            <h4>Растворяется в растительном масле</h4>
+            <p>Витамин D3 растворяется в подсолнечном масле с высоким содержанием олеиновой кислоты – чистом
+              растительном масле.
+              Поскольку витамин D растворим в жирах, он лучше усваивается в кишечнике, если в нем присутствует жир или
+              масло.</p>
+            <h4>Растительная капсула</h4>
+            <p>Особенным является 100% растительная мягкая капсула (V-гель), изготовленная из крахмала тапиоки без ГМО,
+              глицерина и воды. Капсулы маленькие и легко проглатываются.</p>
+          </div>
+          <div id="tab_02" class="tabs__block">
+            d2scsdvdfvdfvf Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, vel! Eum laborum error nesciunt
+            commodi neque deleniti odio sunt aspernatur, impedit cum, dolorem rem? Atque ex modi itaque voluptatum
+            laboriosam!
+          </div>
+          <div id="tab_03" class="tabs__block">
+            dscsdvdfvdfvf Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, vel! Eum laborum error nesciunt
+            commodi neque deleniti odio sunt aspernatur, impedit cum, dolorem rem? Atque ex modi itaque voluptatum
+            laboriosam!
+          </div>
+          <div id="tab_04" class="tabs__block">
+            dscsdvdfvdfvf Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, vel! Eum laborum error nesciunt
+            commodi neque deleniti odio sunt aspernatur, impedit cum, dolorem rem? Atque ex modi itaque voluptatum
+            laboriosam!
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  @@include('./component/sliderProducts.html', {
+  "title": "Рекомендуем также купить",
+  })
+  @@include('./component/reviewsSlider.html')
+  <section class="cart-accordion">
+    <div class="inner">
+      <div class="accordion">
+        <span class="title">Оставить отзыв о товаре</span>
+        <span class="plus">+</span>
+      </div>
+      <div class="panel contacts">
+        <form>
+          <div class="formcontainer">
+            <div class="inputFlex">
+              <div class="inputFlex__required">
+                <input type="text" placeholder="Имя*" required>
+                <input type="text" placeholder="Телефон*" required>
+              </div>
+              <input type="text" placeholder="D3-Веганский витамин D3 из водорослей">
+            </div>
+            <textarea placeholder="Ваш отзыв"></textarea>
+          </div>
+          <div class="formFooter">
+            <button class="reviewsButton">
+              Оставить отзыв
+              <img src="images/ArrowWhite.png" alt="" />
+            </button>
+            <div class="grade">
+              <p>Оценить:</p>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+  @@include('./component/sliderProducts.html', {
+  "title": "Просмотренные товары",
+  })
+  @@include('./component/footer.html')
+
+  <script>
+    let counterDisplayElem = document.querySelector('.counter-display');
+    let counterMinusElem = document.querySelector('.counter-minus');
+    let counterPlusElem = document.querySelector('.counter-plus');
+
+    let count = 1;
+
+    updateDisplay();
+
+    counterPlusElem.addEventListener("click", () => {
+      count++;
+      updateDisplay();
+    });
+
+    counterMinusElem.addEventListener("click", () => {
+      count--;
+      if (count <= 0) {
+        count = 1
+      }
+      updateDisplay();
+    });
+
+    function updateDisplay() {
+      counterDisplayElem.innerHTML = count;
+    };
+
+  </script>
+  <script>
+    let counterDisplay = document.querySelector('.counter-display2');
+    let counterMinus = document.querySelector('.counter-minus2');
+    let counterPlus = document.querySelector('.counter-plus2');
+
+    let count2 = 1;
+
+    updateDisplay2();
+
+    counterPlus.addEventListener("click", () => {
+      count2++;
+      updateDisplay2();
+    });
+
+    counterMinus.addEventListener("click", () => {
+      count2--;
+      if (count2 <= 0) {
+        count2 = 1
+      }
+      updateDisplay2();
+    });
+
+    function updateDisplay2() {
+      counterDisplay.innerHTML = count2;
+    };
+
+    let tabs = document.querySelectorAll(".tabs__item");
+    tabs.forEach(element => {
+
+      element.addEventListener("click", (e) => {
+        tabs.forEach(element1 => {
+          element1.classList.remove('active');
+
+        })
+
+        e.target.classList.add('active');
+        var contentId = e.target.href.slice(1);
+      })
+    }); 
+  </script>
+  <script>
+    let accordions = document.getElementsByClassName("accordion");
+
+    for (const accordion of accordions) {
+      accordion.addEventListener("click", (e) => {
+        e.currentTarget.classList.toggle("active");
+
+        let panel = e.currentTarget.nextElementSibling;
+        if (panel.style.display === "flex") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "flex";
+          panel.style.flexDirection = "column";
+        }
+      });
+    }
+
+    let paymentCardsEl = document.getElementsByClassName("payment-cards");
+    let cardsEl = document.getElementsByClassName("cards");
+    let selects = document.getElementsByClassName("select");
+
+    for (const select of selects) {
+      select.addEventListener("click", (e) => {
+        e.currentTarget.classList.toggle("active");
+
+        let panel = e.currentTarget.nextElementSibling;
+        if (panel.style.display === "flex") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "flex";
+          panel.style.flexDirection = "column";
+        }
+      });
+    }
+
+    for (const cards of cardsEl) {
+      cards.addEventListener("click", (e) => {
+        for (const card1 of cards.children) {
+          card1.classList.remove('active');
+        }
+        e.target.classList.add('active')
+      });
+    }
+
+    for (const cards of paymentCardsEl) {
+      cards.addEventListener("click", (e) => {
+        for (const card1 of cards.children) {
+          card1.classList.remove('active');
+        }
+        e.target.classList.add('active')
+      });
+    }
+  </script>
+  <script>
+    const popup = document.querySelector('.popup');
+    const popupContainer = document.querySelector('.popup .container');
+    const popupBtn = document.querySelector('.popup-btn');
+
+    popupBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      popup.classList.add('active');
+    })
+
+    popupContainer.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (e.target.classList.contains('container')) {
+        popup.classList.remove('active');
+      }
+    })
+  </script>
+</body>
+
+</html>

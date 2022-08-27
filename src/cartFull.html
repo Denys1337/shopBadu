@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+  <meta name="viewport" content="device-width">
+  <title>xor_test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  @@include('./component/header.html')
+  <div class="path">
+    <p>Главная</p>
+    <img src="images/ArrowRight.png" alt="arrow" />
+    <p>Корзина</p>
+  </div>
+  @@include('./component/cartShortComponent.html')
+  <section class="cart-accordion">
+    <div class="inner">
+      <div class="accordion">
+        <span class="title">Контактные данные</span>
+        <span class="plus">+</span>
+      </div>
+      <div class="panel contacts">
+        <form>
+          <input type="text" placeholder="Имя*" required>
+          <input type="text" placeholder="Телефон*" required>
+          <input type="text" placeholder="Город">
+          <p>Например: <span>Киев,</span> Харьков, <span>Днепр,</span> <span>Одесса,</span> <span>Львов</span></p>
+          <textarea placeholder="Комментарий к заказу"></textarea>
+          <label for="check-form-contacts">
+            <input type="radio" name="check-form-contacts" id="check-form-contacts">
+            <span>Не перезванивать мне для подтверждения заказа</span>
+          </label>
+        </form>
+      </div>
+
+      <div class="accordion">
+        <span class="title">Доставка</span>
+        <span class="plus">+</span></div>
+      <div class="panel delivery">
+        <span class="title">Способы доставки</span>
+        <div class="cards">
+          <div class="card">
+            <img src="images/pickup.svg" alt="">
+            <span>Самовывоз</span>
+          </div>
+          <div class="card">
+            <img src="images/courier.svg" alt="">
+            <span>Адресная доставка курьером</span>
+          </div>
+          <div class="card active">
+            <img src="images/department.svg" alt="">
+            <span>Самовывоз из отделения</span>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="operator">
+            <p>Выберите оператора</p>
+            <div class="select">Выбор оператора</div>
+            <div class="options">
+              <div class="option">Operator 1</div>
+              <div class="option">Operator 1</div>
+              <div class="option">Operator 1</div>
+            </div>
+          </div>
+          <div class="date">
+            <p>Дата доставки</p>
+            <input type="text" placeholder="29.06.2022" name="date" id="date">
+          </div>
+            <div class="department">
+            <p>Выберите Отделение</p>
+            <div class="select">Выберите Отделение</div>
+            <div class="options">
+              <div class="option">Отделение №1: ул. Пироговский путь, 135</div>
+              <div class="option">Отделение №1: ул. Пироговский путь, 135</div>
+              <div class="option">Отделение №1: ул. Пироговский путь, 135</div>
+              <div class="option">Отделение №1: ул. Пироговский путь, 135</div>
+              <div class="option">Отделение №1: ул. Пироговский путь, 135</div>
+              <div class="option">Отделение №1: ул. Пироговский путь, 135</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <span class="title">Оплата</span>
+        <span class="plus">+</span>
+      </div>
+      <div class="panel payment">
+        <span class="title">Способы оплаты</span>
+        <div class="payment-cards">
+          <div class="card">
+            <img src="images/cash.svg" alt="">
+            <span>Оплата наличными</span>
+          </div>
+          <div class="card">
+            <img src="images/cardCash.svg" alt="">
+            <span>Оплата на карту</span>
+          </div>
+          <div class="card active">
+            <img src="images/curierCash.svg" alt="">
+            <span>Оплата курьеру при получении</span>
+          </div>
+      </div>
+    </div>
+    <p class="info">Ваши персональные данные будут использоваться для обработки вашего заказа, для оптимизации вашего использования на этом веб-сайте и для других целей, как описано в нашей политике конфиденциальности.</p>
+    <div class="order-buttons">
+        <div class="prev"><img src="images/ArrowLeft.png" alt=""/>Продолжить покупки</div>
+        <div class="next">Оформить заказ <img src="images/ArrowWhite.png" alt=""/></div>
+      </div>
+    </div>
+  </section>
+  @@include('./component/sliderProducts.html', {
+    "title": "Рекомендуем также купить",
+  })
+  @@include('./component/sliderProducts.html', {
+    "title": "Просмотренные товары",
+  })
+  @@include('./component/footer.html')
+
+  <script>
+    let accordions = document.getElementsByClassName("accordion");
+
+for (const accordion of accordions) {
+  accordion.addEventListener("click", (e) => {
+    e.currentTarget.classList.toggle("active");
+
+    let panel = e.currentTarget.nextElementSibling;
+    if (panel.style.display === "flex") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "flex";
+      panel.style.flexDirection = "column";
+    }
+  });
+}
+
+let paymentCardsEl = document.getElementsByClassName("payment-cards");
+let cardsEl = document.getElementsByClassName("cards");
+let selects = document.getElementsByClassName("select");
+
+for (const select of selects) {
+  select.addEventListener("click", (e) => {
+    e.currentTarget.classList.toggle("active");
+
+    let panel = e.currentTarget.nextElementSibling;
+    if (panel.style.display === "flex") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "flex";
+      panel.style.flexDirection = "column";
+    }
+  });
+}
+
+for (const cards of cardsEl) {
+  cards.addEventListener("click", (e) => {
+    for (const card1 of cards.children) {
+      card1.classList.remove('active');
+    }
+    e.target.classList.add('active')
+  });
+}
+
+for (const cards of paymentCardsEl) {
+  cards.addEventListener("click", (e) => {
+    for (const card1 of cards.children) {
+      card1.classList.remove('active');
+    }
+    e.target.classList.add('active')
+  });
+}
+  </script>
+</body>
+
+</html>

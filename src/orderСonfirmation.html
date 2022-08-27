@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+  <meta name="viewport" content="device-width">
+  <title>xor_test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  @@include('./component/header.html')
+  <div class="path">
+    <img src="images/ArrowLeft.png" alt="arrow" />
+    <a href="">Вернуться к покупкам</a>
+  </div>
+  <section class="order">
+    <div class="main">
+      <div class="order__container">
+        <h2>Спасибо! Мы с вами свяжемся</h2>
+
+        <div class="order__card">
+          <p>Ваш заказ:</p>
+          <div class="oneItem">
+            <div class="oneItem__image">
+              <img src="images/LGlut.png" alt="" />
+              <h4>D3-Веганский витамин D3 из водорослей</h4>
+            </div>
+            <div class="orderSum"style="display:flex; justify-content:space-between; width: 35%;padding-left: 10px;">
+
+              <p>3 шт </p>
+              <p class="oneItem__price">15 000 грн</p>
+            </div>
+          </div>
+          <div class="oneItem">
+            <div class="oneItem__image">
+              <img src="images/LGlut.png" alt="" />
+              <h4>D3-Веганский витамин D3 из водорослей</h4>
+            </div>
+            <p>3 шт </p>
+            <p class="oneItem__price">15 000 грн</p>
+          </div>
+        </div>
+        <div class="total_price">
+          <p>Итого:</p>
+          <p>35 000 грн</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  @@include('./component/footer.html')
+</body>
+
+</html>
