@@ -64,9 +64,15 @@
       gap: 0 9px;
       padding-bottom: 19px;
 
-      img {
+      span {
         width: 12px;
         height: 12px;
+        background:#DBD1C7;
+        border-radius: 50%;
+      }
+
+      .lastSpan {
+        background: linear-gradient(to right, #DBD1C7 50%,#F4F4F4 50%);
       }
 
       p {
@@ -371,14 +377,16 @@
     font-size: 14px;
     line-height: 19px;
     color: #B4B4B4;
-  }
+    span {
+      width: 12px;
+      height: 12px;
+      background:#DBD1C7;
+      border-radius: 50%;
+    }
 
-  .circle {
-    width: 12px;
-    height: 12px;
-    background: #EDEDED;
-    border-radius: 50%;
-    cursor: pointer;
+    .lastSpan {
+      background: linear-gradient(to right, #DBD1C7 50%,#F4F4F4 50%);
+    }
   }
 }
 

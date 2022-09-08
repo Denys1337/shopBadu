@@ -37,6 +37,12 @@ header {
         width: 100%;
         display: flex;
         flex-direction: column; 
+
+       &__wrapperHumb {
+        @media (min-width: 940px) {
+          display: none;
+        }
+        }
         
         &__head {
             max-width: 100%;
@@ -110,7 +116,6 @@ header {
             display: flex;
             align-items: center;
            
-
             ul {
                 display: flex;
                 @media (max-width: 940px) {
@@ -155,6 +160,9 @@ header {
             display: flex;
             align-items: center;
             padding-left: 50px;
+            @media (max-width: 940px) {
+              padding-left: 0px;
+            }
 
             .search {
                 padding-right: 47px;
@@ -172,10 +180,32 @@ header {
             .cart {
                 height: 55px;
                 width: 55px;
+                background: #FFFFFF;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+                border-radius: 50%;
+                position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-bottom: 0;
+
+                img {
+                  z-index: 4;
+                  position: absolute;
+                  left: 10px;
+                }
+
+                span {
+                  position: absolute;                 
+                  top: 12px;
+                  right: 5px;
+                  border-radius: 50%;
+                  color: #FFF;
+                  width: 18px;
+                  height: 18px;
+                  text-align: center;
+                  background:#DBD1C7;
+                }
             }
         }
     } 
@@ -202,6 +232,29 @@ header {
     font-weight: 400;
     font-size: 18px;
     color: #000000;
+}
+
+#hider2 {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+#hider2:checked + .content {
+  display: grid;
+  width: 70%;
+  background: #FAFBFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding-left: 51px;
+  padding-top: 28px;
+  padding-right: 38px;
+  padding-bottom: 46px;
+  gap: 15px 0;
+  font-family: 'Tenor Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
 }
 
 .content {
@@ -435,6 +488,7 @@ header {
     width: calc(100% - 40px);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     @media (max-width: 467px) {
       flex-direction: column;
       margin-bottom: 0;
@@ -451,12 +505,24 @@ header {
    
   }
   
-  .grid .innerPhoto .grid-item .info button {
+  .grid .innerPhoto .grid-item .info a {
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     border: none;
     padding: 16px 42px;
+    text-decoration: none;
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #B9B1AD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 19px;
+    gap: 0 8px;
      
     img {
       width: auto;
@@ -955,6 +1021,9 @@ footer .inner .contactsFooter .contactItem {
   background-color: none;
   min-width: 200px;
   padding-left: 20px;
+  max-height: 400px;
+  overflow: auto;
+
 }
 .dropdown-child a {
   color: white;

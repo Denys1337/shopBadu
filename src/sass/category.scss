@@ -44,10 +44,6 @@
 
   }
 
-  &__block {
-    padding-top: 21px;
-  }
-
   &__specific {
     display: flex;
     justify-items: flex-start;
@@ -74,7 +70,7 @@
     .item {
       display: flex;
       gap: 0 6px;
-
+      align-items: center;
 
       p {
         font-family: 'Open Sans';
@@ -93,9 +89,11 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px 30px;
+    padding: 0 10px;
 
     .product {
       max-width: 240px;
+      width: 240px;
       background: #FFFFFF;
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
       border-radius: 10px;
@@ -104,6 +102,15 @@
       justify-content: center;
       align-items: center;
       padding: 27px 11px;
+      @media (max-width: 573px) {
+        max-width: 400px;
+        width: 400px;
+      }
+
+      a {
+        text-decoration: none;
+        text-align: center;
+      }
 
       h3 {
         font-family: 'Tenor Sans';
@@ -288,4 +295,11 @@
       display: block;
     }
   }
+}
+
+.fltr {
+  position: absolute!important;
+  top: 10px!important;
+  right: 10px!important;
+  left: auto !important;
 }

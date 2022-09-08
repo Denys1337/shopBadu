@@ -22,6 +22,7 @@ const envConfig = JSON.parse(fs.readFileSync('env.config.json', 'utf8'));
 const env = process.env.NODE_ENV ? process.env.NODE_ENV.replace(' ', '') : 'prod';
 const settings = envConfig.survey[env];
 
+
 function styles() {
   return gulp.src('./src/sass/home.scss')
     .pipe(sourcemaps.init())
@@ -101,10 +102,13 @@ gulp.task('watch', watch);
 gulp.task('fonts', fonts);
 gulp.task('images', images);
 gulp.task('html', html);
+gulp.task("js", function () {
+  return del([])
+})
 
 gulp.task('build',
   gulp.series(clean, images,
-    gulp.parallel(fonts, html, styles, /* scripts ,*/ html)
+    gulp.parallel(fonts, html, styles, scripts , html)
   ));
 
 gulp.task('dev', gulp.series('build', 'watch'));

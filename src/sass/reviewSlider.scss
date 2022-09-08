@@ -45,9 +45,15 @@
     padding-bottom: 8px;
     padding-top: 15px;
 
-    img {
+    span {
       width: 12px;
       height: 12px;
+      background:#DBD1C7;
+      border-radius: 50%;
+    }
+
+    .lastSpan {
+      background: linear-gradient(to right, #DBD1C7 50%,#F4F4F4 50%);
     }
 
     p {

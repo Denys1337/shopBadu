@@ -5,7 +5,7 @@
             <a href="#">UK</a>
         </div>
         <a href="#" class="contactsLink">Контакты</a>
-        <div>
+        <div class="menu__wrapperHumb">
             <a href="#" class="search"><img src="images/search.svg" alt="search" /></a>
             <div class="hamburger-menu">
                 <input id="menu__toggle" type="checkbox" />
@@ -22,10 +22,29 @@
                               <a href="#">Подраздел 3</a>
                               <a href="#">Подраздел 4</a>
                               <a href="#">Подраздел 5</a>
+                              <a href="#">Подраздел 2</a>
+                              <a href="#">Подраздел 3</a>
+                              <a href="#">Подраздел 4</a>
+                              <a href="#">Подраздел 5</a>
+                              <a href="#">Подраздел 2</a>
+                              <a href="#">Подраздел 3</a>
+                              <a href="#">Подраздел 4</a>
+                              <a href="#">Подраздел 5</a>
                             </div>
                           </div>
                     </li>
-                    <li><a class="menu__item" href="#">Инградиенты</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="mainmenubtn"><a>Инградиенты</a></button>
+                            <div class="dropdown-child">
+                              <a href="#">Подраздел 1</a>
+                              <a href="#">Подраздел 2</a>
+                              <a href="#">Подраздел 3</a>
+                              <a href="#">Подраздел 4</a>
+                              <a href="#">Подраздел 5</a>
+                            </div>
+                          </div>
+                    </li>
                     <li><a class="menu__item" href="#">Контакты</a></li>
                     <li class="icon-burger">
 
@@ -53,12 +72,51 @@
                         <a href="#">Микроелементы</a>
                     </div>
                 </li>
-                <li><a href="#">Инградиенты</a></li>
+                <li>
+                    <a href="#"><label class="link" for="hider2" id="clickme2">Инградиенты</label></a>
+                    <input type="checkbox" id="hider2">
+                    <div class="content">
+                        <a href="#">Коэнзимы2</a>
+                        <a href="#">Жирные кислоты (омега)3</a>
+                        <a href="#">Фитонутриенты4</a>
+                        <a href="#">Пробиотики5</a>
+                        <a href="#">Аминокислоты6</a>
+                        <a href="#">Пребиотики7</a>
+                        <a href="#">Витамины8</a>
+                        <a href="#">Микроелементы9</a>
+                    </div>
+                </li>
             </ul>
             <div class="menu__icon">
                 <a href="#" class="search"><img src="images/search.svg" alt="search" /></a>
-                <a href="#" class="cart"><img src="images/cart.png" alt="search" /></a>
+                <a href="#" class="cart">
+                    <img src="images/cartDetail.svg" alt="search" />
+                    <span>0</span>
+                </a>
             </div>
         </div>
     </div>
 </header>
+<script>
+    const box = document.querySelector('#hider');
+    const label = document.querySelector('#clickme');
+    document.addEventListener('click', (e) => {
+    const click = e.composedPath().includes(box);
+    if ( !click ) {
+    box.checked = false
+    }});
+     label.addEventListener('click', (e) => {
+        box.checked = !box.checked;
+    })
+
+    const box2 = document.querySelector('#hider2');
+    const label2 = document.querySelector('#clickme2');
+    document.addEventListener('click', (e) => {
+    const click = e.composedPath().includes(box2);
+    if ( !click ) {
+    box2.checked = false;
+    }});
+     label2.addEventListener('click', (e) => {
+        box2.checked = !box2.checked;
+    })
+</script>
